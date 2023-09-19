@@ -1,0 +1,26 @@
+[package]
+name = "axum-template"
+description = """
+A template for axum applications with some nice touches
+"""
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/ScratchCat458/axum-template"
+readme = "README.md"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = "0.6"
+tokio = { version = "1", features = ["full"] }
+tower = { version = "0.4", features = ["limit"] }
+tower-http = { version = "0.4", features = ["fs", "timeout"] }
+# Thats a lot of debugging utils
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+color-eyre = { version = "0.6", features = ["issue-url"] }
+tracing-error = "0.2"
+tracing-opentelemetry = "0.21"
+opentelemetry = "0.20"
+opentelemetry-jaeger = "0.19"
